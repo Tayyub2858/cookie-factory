@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* styles/globals.css */
+.gradient-border {
+  padding: 3px; /* same as p-[3px] */
+  border: 3px solid transparent; /* border thickness */
+  border-radius: 9999px; /* same as rounded-full */
+  border-image: linear-gradient(359.9deg, #DEC99F 31.28%, #916D4C 125.2%) 1;
+}
+@keyframes slideFadeUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFadeDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideFadeUp 0.4s ease-in-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideFadeDown 0.4s ease-in-out forwards;
+}
